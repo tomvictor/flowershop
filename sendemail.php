@@ -11,7 +11,7 @@
     $message = @trim(stripslashes($_POST['message'])); 
 
     $email_from = $email;
-    $email_to = 'email@email.com';//replace with your email
+    $email_to = 'tom@buildfromzero.com';//replace with your email
 
     $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
