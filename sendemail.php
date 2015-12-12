@@ -25,8 +25,8 @@ $domain = "mg.buildfromzero.com";
     $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'phone: ' . $phone . "\n\n" . 'company: ' . $company . "\n\n" .'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
 $result = $mgClient->sendMessage($domain, array(
-    'from'    => 'Virgin Mariya <mailgun@mg.buildfromzero.com>',
-    'to'      => 'TomVictor <tom@buildfromzero.com>',
+    'from'    => 'VirginMariya contact <mailgun@mg.buildfromzero.com>',
+    'to'      => 'Jijo <virginmariya07@gmail.com>',
     'subject' => $subject,
     'text'    => $body
 ));
