@@ -20,13 +20,13 @@ $domain = "mg.buildfromzero.com";
     $email_from = $email;
     $email_to = 'tom@buildfromzero.com';//replace with your email
 
-    $body = 'Name: ' $name "\n\n" 'Email: '  $email  "\n\n"  'Subject: '  $subject  "\n\n"  'Message: '  $message
+    $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
 $result = $mgClient->sendMessage($domain, array(
     'from'    => 'Virgin Mariya <mailgun@mg.buildfromzero.com>',
     'to'      => 'TomVictor <tom@buildfromzero.com>',
     'subject' => 'Hello',
-    'text'    => $body
+    'text'    => $name
 ));
 
 
