@@ -35,5 +35,6 @@ $result = $mgClient->sendMessage($domain, array(
 
   //  $success = @mail($email_to, $subject, $body, 'From: <'.$email_from.'>');
 
-    echo json_encode($status);
-    die;
+    //echo json_encode($status);
+header('Location: http://virginmariya.com');
+die;
