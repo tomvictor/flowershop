@@ -12,21 +12,23 @@ $domain = "mg.buildfromzero.com";
 		'message'=>'Thank you for contact us. As early as possible  we will contact you '
 	);
 
-    $name = $_POST['name']; 
+    $name = @trim(stripslashes($_POST['name'])); 
     $email = @trim(stripslashes($_POST['email'])); 
     $subject = @trim(stripslashes($_POST['subject'])); 
     $message = @trim(stripslashes($_POST['message'])); 
+    $phone = @trim(stripslashes($_POST['phone']));
+    $company = @trim(stripslashes($_POST['company']));
 
     $email_from = $email;
     $email_to = 'tom@buildfromzero.com';//replace with your email
 
-    $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
+    $body = 'Name: ' . $name . "\n\n" . 'Email: ' . $email . "\n\n" . 'phone: ' . $phone . "\n\n" . 'company: ' . $company . "\n\n" .'Subject: ' . $subject . "\n\n" . 'Message: ' . $message;
 
 $result = $mgClient->sendMessage($domain, array(
     'from'    => 'Virgin Mariya <mailgun@mg.buildfromzero.com>',
     'to'      => 'TomVictor <tom@buildfromzero.com>',
-    'subject' => 'Hello',
-    'text'    => $name
+    'subject' => $subject,
+    'text'    => $body
 ));
 
 
